@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 2em 0;
+    background-image: url('./images/memory-game-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background-size: 100vw 100vh;
+        padding: 0;
+    }
+}
+h1 {
+    font-family: cursive;
+    letter-spacing: 2px;
+    font-size: 3em;
+    font-weight: bolder;
+}
+.tile-selector {
+    margin-block: 1.5em;
+}
+.tile-selector button {
+    margin-top: .5em;
+}
+select {
+    width: 100px;
+    text-align: center;
+    margin-left: 5px;
+    padding: 2px;
+}
+option{
+    font-size: 1.5em;
+}
+.card-container {
+    gap: 15px;
+    padding: 1em;
+    margin-block: 1em;
+    background-color: #0455BF;
+    display: none;
+    margin-inline: auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.individual-tile {
+    position: relative;
+    cursor: pointer;
+}
+.tile-before, .tile-after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.7s ease-out;
+}
+.tile-before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBF0F2;
+    font-size: 2em;
+}
+.tile-after {
+    transform: rotateY(180deg);
+}
+.individual-tile.flipped .tile-before{
+    transform: rotateY(180deg);
+}
+.individual-tile.flipped .tile-after{
+    transform: rotateY(0deg);
+}
+.controllers {
+    display: none;
+}
+.control {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: .5em;
+}
+button {
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #517EA6;
+    color: #EBF0F2;
+    transition: all 0.3s ease-in-out
+}
+button:hover {
+    background-color: #AED3F2;
+    color: black
+}
+button[disabled] {
+    cursor: not-allowed;
+    opacity: .5;
+}
+label, select, .controllers p{
+    font-size: 1.5em;
+}
+.result {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #044BD9;
+    width: 300px;
+    margin-inline: auto;
+    font-weight: bold;
+}
+@media screen and (min-width: 480px) {
+    .result {
+        font-size: 2em
+    }
+}

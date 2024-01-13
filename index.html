@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <main >
+        <h1>Memory Game</h1>
+        <div class="tile-selector">
+            <div>
+                <label for="tiles">Select Number of Game Tiles:</label>
+                <select name="" id="tiles">
+                    <option value="0" selected disabled>0</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                    <option value="30">30</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                </select>
+            </div>
+            
+            <button class="show-tiles">Show</button>
+        </div>
+
+        <p class="result"></p>
+        
+
+        <div class="card-container"></div>
+
+        <div class="controllers">
+            <p>Moves: <span class="moves">0</span> </p>
+            <p>Time: <span class="time">00:00</span> </p>
+            <div class="control">
+                <button class="start">Start</button>
+                <button class="pause">Pause</button>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="index.js" type="module"></script>
+</body>
+</html> 
