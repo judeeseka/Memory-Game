@@ -128,7 +128,7 @@ function renderTiles() {
     setTimeout(() => {
         individualTiles.forEach(tile => tile.classList.remove('flipped'));
         start.disabled = false;
-    }, 4000);
+    }, tileNumber > 25 ? 4500 : 1500);
     
 }
 
